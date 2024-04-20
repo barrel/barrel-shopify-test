@@ -231,7 +231,12 @@
     "sections": {
       "frontpage_title": "Frontpage Collection",
       "featured_title": "Featured Collections",
-      "news_title": "Related articles"
+      "news_title": "Related articles",
+      "hero": {
+        "title_l1": "Maple Never",
+        "title_l2": "Tasted So Good",
+        "text": "We blend this bourbon with natural smoked maple flavors for a unique, smoky sweetness. Full bodied, inviting maple notes that lift to smoke and are complemented with rich vanilla caramel. Smoked hickory and maple wood, with hints of earthy gains."
+      }
     },
     "onboarding": {
       "modal_title": "Almost there...",

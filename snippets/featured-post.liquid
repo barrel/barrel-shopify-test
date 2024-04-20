@@ -1,0 +1,28 @@
+<div class="featured-post__container full-w rel">
+    <div class="featured-post f abs aic jcc align-c">
+        {% capture srcset %}
+        {{ article.image | img_url: '360x334', crop: 'center' }} 360w,
+        {{ article.image | img_url: '540x501', crop: 'center' }} 540w
+        {{ article.image | img_url: '720x668', crop: 'center' }} 720w,
+        {{ article.image | img_url: '900x835', crop: 'center' }} 900w
+        {% endcapture %}
+        <div class="featured-post__image-container full-w">
+            <img class="featured-post__image w-full"
+                src="{{ article.image | img_url: '300x278', crop: 'center' }}"
+                srcset="{{ srcset }}"
+                sizes="auto"
+                width="100%"
+                alt="{{ article.title }}"
+            >
+        </div>
+        <div class="featured-post____meta-container f jcc">
+            <div class="featured-post____meta pt1 pb1">
+                <div class="featurd-post__icon">{% include 'post-icon' %}</div>
+                <time class="featurd-post__date" datetime="{{ article.published_at | date: '%Y-%m-%d' }}">{{ article.published_at | date: '%B %d' }}</time>
+                <h1 class="featurd-post__title h1"><a href="{{ article.url }}">{{ article.title }}</a></h1>
+                <p>{{article.content}}</p>
+                {% include 'read-more' %}
+            </div>
+        </div>
+    </div>
+</div>
