@@ -52,8 +52,12 @@
   "_preact.4b3dbaf5.js": {
     "file": "preact.4b3dbaf5.js"
   },
+  "assets\/hero.jpg": {
+    "file": "hero.57885bfa.jpg",
+    "src": "assets\/hero.jpg"
+  },
   "frontend\/entrypoints\/main.css": {
-    "file": "main.9581e0a5.css",
+    "file": "main.c3707dad.css",
     "isEntry": true,
     "src": "frontend\/entrypoints\/main.css"
   },
