@@ -1,1 +1,42 @@
-.hero {}
+.banner {
+    flex-direction: column;
+    background-image: url('/assets/hero-image.jpg');
+    background-size: cover;
+}
+
+.tagline-container {
+    padding: 15px;
+}
+
+.slogan {
+    justify-content: center;
+    text-align: center;
+    width: var(--xxs);
+}
+
+.title {
+    font-size: 3.5em;
+}
+
+.product-image {
+    width: 60%;
+}
+
+@media (--ml) {
+    .product-image-container {
+        width: 50%;
+    }
+    .product-image {
+        max-width: 400px;
+    }
+    .slogan {
+        margin-top: -300px;
+        text-align: left !important;
+    }
+    .tagline-container {
+        width: 50%;
+    }
+    .banner {
+        flex-direction: row;
+    }
+}

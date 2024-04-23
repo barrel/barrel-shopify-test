@@ -1,1 +1,49 @@
-.featured-post {}
+.featured-container {
+    height: 700px;
+    background-color: var(--mongoose);
+}
+
+.featured-content {
+    flex-direction: column;
+    background-color: var(--white);
+    width: 80%;
+    left: 50%;
+    bottom: 100px;
+    transform: translate(-50%, 0);
+}
+
+.featured-image-container,
+.featured-meta-container {
+    width: 100%;
+}
+
+.featured-meta {
+    max-width: 80%;
+}
+
+.featured-meta-container {
+    max-height: var(--xs);
+}
+
+.featured-image-container img {
+    max-height: var(--xs);
+    height: 400px;
+    object-fit: cover;
+    margin-bottom: -7.5px;
+}
+
+@media (--ml) {
+    .featured-meta-container img {
+        height: auto !important;
+    }
+    .featured-image-container,
+    .featured-meta-container {
+        width: 50%;
+    }
+    .featured-content {
+        flex-direction: row !important;
+    }
+    .featured-container {
+        height: 400px !important;
+    }
+}
