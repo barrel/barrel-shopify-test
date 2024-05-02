@@ -1,8 +1,12 @@
 :root {
   /* Padding */
+  --paddingXXS: 12px;
+  --paddingXS: 16px;
   --padding: 20px;
-  --paddingXS: 30px;
+  --paddingS: 30px;
   --paddingM: 50px;
+  --paddingL: 80px;
+  --paddingXL: 100px;
 
   /* Breakpoints */
   --xxs: 445px;

@@ -1,0 +1,54 @@
+<section class="hero">
+  <div class="hero__inner">
+    <div class="hero__content">
+      <div class="hero__header">
+        {% if section.settings.title != blank %}
+          <h1 class="hero__title h1 white">
+            {{ section.settings.title }}
+          </h1>
+        {% endif %}
+
+        {% if section.settings.subtitle != blank %}
+          <div class="hero__subtitle-wrapper white">
+            {{ section.settings.subtitle }}
+          </div>
+        {% endif %}
+      </div>
+
+      <div class="hero__aside">
+        {% if section.settings.aside_image != blank %}
+          {% capture aside_srcset %}
+            {{ section.settings.aside_image | img_url: '240x458', crop: 'center' }} 320w,
+            {{ section.settings.aside_image | img_url: '290x553', crop: 'center' }} 600w,
+            {{ section.settings.aside_image | img_url: '350x668', crop: 'center' }} 1400w
+          {% endcapture %}
+
+          <img class="hero__aside-image"
+            src="{{ section.settings.aside_image | img_url: '240x458', crop: 'center' }}"
+            srcset="{{ aside_srcset }}"
+            sizes="auto"
+            alt="{{ section.settings.aside_image.alt }}"
+          >
+        {% endif %}
+      </div>
+    </div>
+
+    {% if section.settings.background_image != blank %}
+      {% capture srcset %}
+        {% assign image = section.settings.background_image %}
+
+        {{ image | img_url: '320x600', crop: 'center' }} 320w,
+        {{ image | img_url: '600x800', crop: 'center' }} 600w,
+        {{ image | img_url: '1000x625', crop: 'center' }} 1000w,
+        {{ image | img_url: '1400x875', crop: 'center' }} 1400w
+      {% endcapture %}
+
+      <img class="hero__background-image img lazyload"
+        src="{{ image | img_url: '320x600', crop: 'center' }}"
+        srcset="{{ srcset }}"
+        sizes="auto"
+        alt="{{ image.alt }}"
+      >
+    {% endif %}
+  </div>
+</section>

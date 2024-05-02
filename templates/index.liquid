@@ -1,9 +1,8 @@
 <!-- /templates/index.liquid -->
-
 {% section 'hero' %}
 
 {% for article in blogs['news'].articles limit: 1 %}
-  {% include 'featured-post' %}
+  {% render 'featured-post' with article: article %}
 {% endfor %}
 
-{% include 'posts-list' %}
+{% render 'posts-list' %}

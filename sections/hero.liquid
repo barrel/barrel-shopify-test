@@ -1,9 +1,14 @@
-{% include 'hero' %}
+{% render 'hero' with section: section %}
 
 {% schema %}
   {
     "name": "Hero",
     "settings": [
+      {
+        "type": "image_picker",
+        "id": "background_image",
+        "label": "Choose Background Image"
+      },
       {
         "type": "text",
         "id": "title",
@@ -11,9 +16,15 @@
       },
       {
         "type": "richtext",
-        "id": "text",
-        "label": "Text",
+        "id": "subtitle",
+        "label": "Subtitle",
         "default": "<p>Use this text to share information about your brand with your customers. Describe a product, share announcements, or welcome customers to your store.</p>"
+      },
+      {
+        "type": "image_picker",
+        "id": "aside_image",
+        "label": "Choose Aside Image",
+        "info": "This image will sit next to the title and subtitle. Image needs to be in .png format"
       }
     ]
   }

@@ -1,0 +1,46 @@
+<div class="featured-post">
+  <div class="featured-post__inner">
+    <div class="featured-post__grid">
+      {% if article.image %}
+        {% capture article_srcset %}
+          {{ article.image | img_url: '360x334', crop: 'center' }} 360w,
+          {{ article.image | img_url: '637x588', crop: 'center' }} 637w
+        {% endcapture %}
+
+        <div class="featured-post__grid-item featured-post__grid-item--media">
+          <i class="img__loader--alt"></i>
+
+          <img class="featured-post__image img lazyload"
+            src="{{ article.image | img_url: '360x334', crop: 'center' }}"
+            srcset="{{ article_srcset }}"
+            sizes="auto"
+            alt="{{ article.title }}"
+          >
+        </div>
+      {% endif %}
+
+      <div class="featured-post__grid-item featured-post__grid-item--details">
+        <div class="featured-post__icon">
+          {% render 'post-icon' with article: article %}
+        </div>
+
+        <time
+          class="featured-post__date"
+          datetime="{{ article.published_at | date: '%Y-%m-%d' }}"
+        >
+          {{ article.published_at | date: '%B %d' }}
+        </time>
+
+        <h3 class="featured-post__title">
+          {{ article.title }}
+        </h3>
+
+        <p class="featured-post__content">
+          {{ article.content | strip_html | truncate: 173 }}
+        </p>
+
+        {% render 'read-more' with article: article %}
+      </div>
+    </div>
+  </div>
+</div>
