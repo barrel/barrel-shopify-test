@@ -1,0 +1,68 @@
+{% comment %}
+  Renders the hero section.
+
+  Accepts:
+  - section: {Object} section object.
+
+  Usage:
+  {% render 'hero', section: section %}
+{% endcomment %}
+
+{% liquid
+  assign background_image = section.settings.background_image
+  assign title = section.settings.title
+  assign text = section.settings.text
+  assign foreground_image = section.settings.foreground_image
+  assign desktop_height = section.settings.desktop_height
+  assign text_color = section.settings.text_color
+  assign background_color = section.settings.background_color
+%}
+
+<section class="hero-container rel">
+  <div class="hero">
+    <div class="hero_copy">
+      {% if title != blank %}
+        {% comment %} h2 because I saw there's already an h1 set on the navbar {% endcomment %}
+        <h2 class="main-title">{{ title }}</h2>
+      {% endif %}
+
+      {% if text != blank %}
+        <div class="hero_text">
+          {{ text }}
+        </div>
+      {% endif %}
+    </div>
+
+    {% if foreground_image %}
+      <div class="hero_fg-img">
+        {% comment %} This will automatically create a srcet and render an <img> tag {% endcomment %}
+        {% comment %} Loading Lazy its optional, as it's a hero banner for the home loading lazy might not be ideal, we want this to be seen asap {% endcomment %}
+        {{ foreground_image | image_url: width: 1024 | image_tag: loading: 'eager' }}
+      </div>
+    {% endif %}
+  </div>
+
+  {% if background_image %}
+    <div class="abs fit hero_bg-img">
+      {% comment %} This will automatically create a srcet and render an <img> tag {% endcomment %}
+      {% comment %} Loading Lazy its optional, as it's a hero banner for the home loading lazy might not be ideal, we want this to be seen asap {% endcomment %}
+      {{ background_image | image_url: width: 2560 | image_tag: loading: 'eager' }}
+    </div>
+  {% endif %}
+</section>
+
+<style data-shopify>
+  .hero {
+    color: {{ text_color }};
+  }
+
+  .hero_bg-img::after {
+    background: {{ background_color }};
+  }
+
+  @media (min-width: 960px) {
+    .hero {
+      height: {{ desktop_height }}px;
+    }
+  }
+</style>
