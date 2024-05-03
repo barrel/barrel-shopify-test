@@ -47,12 +47,39 @@
             "type": "badge",
             "settings": {
               "badge_title_id": "TRY IT FOR  60 NIGHTS",
-              "badge_subtitle_id": "You'll love it, else send it back <3"
+              "badge_subtitle_id": "You'll love it, else send it back <3",
+              "badge_image": "shopify:\/\/shop_images\/clock.svg"
+            }
+          },
+          "badge_LzVk8j": {
+            "type": "badge",
+            "settings": {
+              "badge_title_id": "WE PAY YOUR SHIPPING",
+              "badge_subtitle_id": "Your US shipping is on us!",
+              "badge_image": "shopify:\/\/shop_images\/box.svg"
+            }
+          },
+          "badge_3Fgqhj": {
+            "type": "badge",
+            "settings": {
+              "badge_title_id": "BLOOMY CARE+",
+              "badge_subtitle_id": "Easy Returns & After Sales",
+              "badge_image": "shopify:\/\/shop_images\/giftbox.svg"
+            }
+          },
+          "badge_GYAVRi": {
+            "type": "badge",
+            "settings": {
+              "badge_title_id": "BLOOMY = 1 TREE PLANTED",
+              "badge_subtitle_id": "Bloomy x the Eden Deforestation Project"
             }
           }
         },
         "block_order": [
-          "badge_6776xe"
+          "badge_6776xe",
+          "badge_LzVk8j",
+          "badge_3Fgqhj",
+          "badge_GYAVRi"
         ],
         "settings": {
           "background": "#ffffff",
