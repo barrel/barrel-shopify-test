@@ -86,6 +86,31 @@
           "background": "#ffffff",
           "color_svg": "#000000"
         }
+      },
+      "collection-list-filter-section": {
+        "type": "collection-list-filter-section",
+        "settings": {
+          "variant_collection_list": "collection_title",
+          "top_title": "Experience Bloomy",
+          "bottom_title": "Like our content ?  Check us out!",
+          "card_size": "compact",
+          "show_all_variants": "main_variant",
+          "collection_id": "pillowcase",
+          "check_color": false,
+          "check_type": false,
+          "background_section": "#ffffff",
+          "title_color": "#000000",
+          "types_filter_text_color": "#152f4e",
+          "product_desc_text_color": "#152f4e",
+          "product_desc_text_color_secondary": "#152f4e",
+          "cta_text": "SHOP ALL",
+          "cta_text_color_no_hover": "#ffffff",
+          "cta_background_color_no_hover": "#152f4e",
+          "cta_text_color_hover": "#152f4e",
+          "cta_background_color_hover": "#ffffff",
+          "card_price": "#1A1A1A",
+          "card_price_compare": "#A92521"
+        }
       }
     },
     "content_for_index": [
