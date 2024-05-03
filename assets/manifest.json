@@ -64,6 +64,7 @@
       "modules\/cart-shipping-calculator\/cart-shipping-calculator.js",
       "modules\/contact-form\/contact-form.js",
       "modules\/image\/image.js",
+      "modules\/collection-list-filter-section\/collection-list-filter-section.js",
       "modules\/mini-cart\/mini-cart.js",
       "modules\/newsletter\/newsletter.js",
       "modules\/plp--complex\/plp--complex.js",

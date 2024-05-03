@@ -2,8 +2,9 @@
 
 {% section 'hero' %}
 {% section 'badges-section' %}
+{% section 'collection-list-filter-section' %}
 {% for article in blogs['news'].articles limit: 1 %}
   {% include 'featured-post' %}
 {% endfor %} 
 
-{% include 'posts-list' %}
+{% include 'posts-list' %} 
