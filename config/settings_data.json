@@ -71,7 +71,8 @@
             "type": "badge",
             "settings": {
               "badge_title_id": "BLOOMY = 1 TREE PLANTED",
-              "badge_subtitle_id": "Bloomy x the Eden Deforestation Project"
+              "badge_subtitle_id": "Bloomy x the Eden Deforestation Project",
+              "badge_image": "shopify:\/\/shop_images\/tree-icon.svg"
             }
           }
         },
