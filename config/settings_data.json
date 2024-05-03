@@ -36,8 +36,24 @@
       "hero": {
         "type": "hero",
         "settings": {
-          "title": "",
-          "text": "<p>Use this text to share information about your brand with your customers. Describe a product, share announcements, or welcome customers to your store.<\/p>"
+          "background_image": "shopify:\/\/shop_images\/www.knobcreek.com-1293609732325191.jpg",
+          "background_color": "linear-gradient(90deg, rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0) 100%, rgba(0, 0, 0, 0) 100%)",
+          "title": "Maple Never<br>Tasted So Good",
+          "text": "<p>We blend this bourbon with natural smoked maple flavors fora unique, smoky sweetness. Full bodied, inviting maple notesthat lift to smoke and are complemented with rich vanillacaramel. Smoked hickory and maple wood, with hints ofearthy grains.<\/p>",
+          "text_color": "#f3f1ed",
+          "foreground_image": "shopify:\/\/shop_images\/www.knobcreek.com-1310894113736742_cr.png",
+          "desktop_height": 940
+        }
+      },
+      "featured-post": {
+        "type": "featured-post",
+        "settings": {
+          "content_type": "recent_blog_post",
+          "blog_post": "news\/too-much-flavor-for-four-walls-to-hold",
+          "blog": "news",
+          "background_color": "#b1a485",
+          "adjust_bottom_spacing": -285,
+          "adjust_bottom_spacing_mobile": -150
         }
       }
     },
