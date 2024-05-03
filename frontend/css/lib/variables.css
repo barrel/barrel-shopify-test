@@ -19,15 +19,15 @@
   --black: #000000;
   --white: #ffffff;
   --charcoal: #343538;
-  --grey1: #8D8D8D;
+  --grey1: #8d8d8d;
   --grey2: #e3e3e3;
-  --grey3: #CDCDCD;
-  --grey4: #F5F5F5;
-  --red: #CA0526;
-  --mongoose: #B5A484;
-  --pampas: #F3F1ED;
-  --wellRead: #BD3131;
-  --codGray: #1E1E1E;
+  --grey3: #cdcdcd;
+  --grey4: #f5f5f5;
+  --red: #ca0526;
+  --mongoose: #b5a484;
+  --pampas: #f3f1ed;
+  --wellRead: #bd3131;
+  --codGray: #1e1e1e;
 
   /* Borders */
   --border: 1px solid var(--black);
@@ -51,7 +51,8 @@
   /* Grids */
   --gutter: 20px;
   --gutter-sm: 10px;
-  --gutter-lg: 20px;-ease-out: cubic-bezier(0.445, 0.05, 0.55, 0.95);
+  --gutter-lg: 20px;
+  -ease-out: cubic-bezier(0.445, 0.05, 0.55, 0.95);
 
   /* Header */
   --h-height: 73px;
@@ -63,6 +64,7 @@
 
   /* Typography */
   --f-weight-normal: 400;
+  --f-weight-semi-bold: 500;
   --f-weight-bold: 600;
   --f-small: 13px;
 }
