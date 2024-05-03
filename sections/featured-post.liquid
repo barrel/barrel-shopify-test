@@ -1,0 +1,64 @@
+{% render 'featured-post', section: section %}
+
+{% schema %}
+{
+  "name": "Featured Post",
+  "settings": [
+    {
+      "type": "header",
+      "content": "Content",
+      "info": "Select which content to display in this section."
+    },
+    {
+      "type": "select",
+      "id": "content_type",
+      "label": "Content type",
+      "default": "recent_blog_post",
+      "options": [
+        {
+          "value": "blog_post",
+          "label": "Specific blog post"
+        },
+        {
+          "value": "recent_blog_post",
+          "label": "Recent post from a blog"
+        }
+      ]
+    },
+    {
+      "type": "article",
+      "id": "blog_post",
+      "label": "Blog Post"
+    },
+    {
+      "type": "blog",
+      "id": "blog",
+      "label": "Blog"
+    },
+    {
+      "type": "color",
+      "id": "background_color",
+      "label": "Background Color",
+      "default": "#b1a485"
+    },
+    {
+      "type": "header",
+      "content": "Layout"
+    },
+    {
+      "type": "number",
+      "id": "adjust_bottom_spacing",
+      "label": "Adjust bottom spacing",
+      "default": -100,
+      "placeholder": "Regain spacing by adjusting the value in pixels"
+    },
+    {
+      "type": "number",
+      "id": "adjust_bottom_spacing_mobile",
+      "label": "Adjust bottom spacing mobile",
+      "default": -100,
+      "placeholder": "Regain mobile spacing by adjusting the value in pixels"
+    }
+  ]
+}
+{% endschema %}
