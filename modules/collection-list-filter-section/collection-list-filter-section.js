@@ -2,13 +2,10 @@ import select from 'select-dom';
 import on from 'dom-event';
 
 const initScrollButtons = (el) => {
-
-    document.addEventListener("DOMContentLoaded", function () {
+  
         const buttonPrevious = el.querySelector(".button_previous");
         const buttonNext = el.querySelector(".button_next");
         const productsContainer = el.querySelector(".products_container");
-
-
         // Function to update arrow visibility based on scroll position
         const updateArrowVisibility = () => {
             const isAtStart = productsContainer.scrollLeft === 0;
@@ -44,8 +41,7 @@ const initScrollButtons = (el) => {
         if (productsContainer.scrollWidth > productsContainer.clientWidth) {
             buttonNext.style.opacity = 1;
         }
-    });
-
+        buttonNext.style.opacity = 1;
 }
 
 const initCardsProducts = (el,products,productColorPrimary,productColorSecondary,uniqueColorsFilter) => {
@@ -156,7 +152,6 @@ const sizeCardInit = (el) => {
         }
     }
 }
-
 
 const initCTAButton = (el,ctaHoverBg,ctaNoHoverBg,ctaNoHovertext,ctaHovertext) => {
     const hoverStyles = `

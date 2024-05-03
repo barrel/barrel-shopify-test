@@ -118,7 +118,7 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  opacity: 0;
+  opacity: 1;
   z-index: 2;
 }
 .collection_list_filter_section .button_next img {
@@ -286,7 +286,7 @@
     display: none;
   }
   .collection_list_filter_section .button_next {
-    display: none;
+    display: flex;
   }
   .collection_list_filter_section .arrows_container {
     display: none;
@@ -352,7 +352,7 @@
     display: none;
   }
   .collection_list_filter_section .button_next {
-    display: none;
+    display: flex;
   }
   .collection_list_filter_section .products_container {
     height: fit-content;

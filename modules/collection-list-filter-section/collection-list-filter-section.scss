@@ -132,7 +132,7 @@
             display: flex;
             justify-content: center;
             align-items: center;
-            opacity: 0;
+            opacity: 1;
             z-index: 2;
 
             img{
@@ -317,7 +317,7 @@
             display: none;
         }
         .button_next{
-            display: none;
+            display: flex;
         }
         .arrows_container{
             display: none;
@@ -402,7 +402,7 @@
             display: none;
         }
         .button_next{
-            display: none;
+            display: flex;
         }
         .products_container{
             height: fit-content;
