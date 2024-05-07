@@ -36,14 +36,9 @@ pnpm install
 
 ```bash
 # Start the vite server on http://localhost:5173
-pnpm dev
+pnpm start
 ```
 > **Note**: This server is not your theme server. It is the server that vite uses to process your assets, such as scripts or stylesheets. You still need to serve your theme using the Shopify CLI.
-
-```bash
-# Serve your theme
-pnpm serve
-```
 
 ## Production
 
@@ -57,4 +52,4 @@ pnpm build
 pnpm deploy
 ```
 
-Checkout the [Theme commands](https://shopify.dev/themes/tools/cli/theme-command) for more information.
+Checkout the [Theme commands](https://shopify.dev/docs/api/shopify-cli/theme) for more information.
