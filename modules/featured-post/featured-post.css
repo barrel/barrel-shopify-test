@@ -1,1 +1,37 @@
-.featured-post {}
+.featured-post__container {
+    @media(--ml) {
+        height: 400px !important;
+    }
+    height: 700px;
+    background-color: var(--mongoose);
+    .featured-post {
+        @media(--ml) {
+            flex-direction: row !important;
+        }
+        flex-direction: column;
+        background-color: var(--white);
+        .featured-post__image-container, .featured-post____meta-container {
+            @media(--ml) {
+                width: 50%;
+            }
+            width: 100%;
+            .featured-post____meta {
+                max-width: 80%;
+            }
+            max-height: var(--xs);
+            img {
+                max-height: var(--xs);
+                @media(--ml) {
+                    height: auto !important;
+                }
+                height: 400px;
+                object-fit: cover;
+                margin-bottom: -7.5px;
+            }
+        }
+        width: 80%;
+        left: 50%;
+        bottom: 100px;
+        transform: translate(-50%, 0);
+    }
+}

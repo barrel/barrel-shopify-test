@@ -1,1 +1,37 @@
-.hero {}
+.hero {
+    flex-direction: column;
+    @media (--ml) {
+        flex-direction: row;
+    }
+    background-image: url('/assets/hero.jpg');
+    background-size: cover;
+    .hero__tagline-container {
+        @media (--ml) {
+            width: 50%;
+        }
+        padding: 15px;
+        .hero__tagline {
+            @media (--ml) {
+                margin-top: -300px;
+                text-align: left !important;
+            }
+            justify-content: center;
+            text-align: center;
+            width: var(--xxs);
+            .hero__title {
+                font-size: 3.5em;
+            }
+        }
+    }
+    .hero__bottle-image-container {
+        @media (--ml) {
+            width: 50%;
+        }
+        .hero__bottle-image {
+            @media (--ml) {
+                max-width: 400px;
+            }
+            width: 60%;
+        };
+    }
+}
