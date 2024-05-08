@@ -1,20 +1,67 @@
-{% include 'hero' %}
+{% comment %} Replacing {Include} with {Render} as {Include} is deprecated {% endcomment %}
+{% comment %} https://shopify.dev/docs/api/liquid/tags/include {% endcomment %}
+{% render 'hero', section: section %}
 
 {% schema %}
-  {
-    "name": "Hero",
-    "settings": [
-      {
-        "type": "text",
-        "id": "title",
-        "label": "Title"
-      },
-      {
-        "type": "richtext",
-        "id": "text",
-        "label": "Text",
-        "default": "<p>Use this text to share information about your brand with your customers. Describe a product, share announcements, or welcome customers to your store.</p>"
-      }
-    ]
-  }
+{
+  "name": "Hero",
+  "settings": [
+    {
+      "type": "header",
+      "content": "Background"
+    },
+    {
+      "type": "image_picker",
+      "id": "background_image",
+      "label": "Background Image"
+    },
+    {
+      "type": "color_background",
+      "id": "background_color",
+      "label": "background_color",
+      "default": "linear-gradient(90deg, rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0) 100%, rgba(0, 0, 0, 0) 100%)",
+      "info": "Set a background gradient color to overlay the image or use a solid color if no image is set."
+    },
+    {
+      "type": "header",
+      "content": "Content"
+    },
+    {
+      "type": "text",
+      "id": "title",
+      "label": "Title"
+    },
+    {
+      "type": "richtext",
+      "id": "text",
+      "label": "Text",
+      "default": "<p>Use this text to share information about your brand with your customers. Describe a product, share announcements, or welcome customers to your store.</p>"
+    },
+    {
+      "type": "color",
+      "id": "text_color",
+      "label": "Text color",
+      "default": "#FFFFFF"
+    },
+    {
+      "type": "image_picker",
+      "id": "foreground_image",
+      "label": "Foreground Image"
+    },
+    {
+      "type": "header",
+      "content": "Layout"
+    },
+    {
+      "type": "range",
+      "id": "desktop_height",
+      "label": "Desktop Height",
+      "min": 300,
+      "max": 940,
+      "step": 8,
+      "unit": "px",
+      "default": 308
+    }
+  ]
+}
 {% endschema %}

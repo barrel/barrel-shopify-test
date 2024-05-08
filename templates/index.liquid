@@ -2,8 +2,6 @@
 
 {% section 'hero' %}
 
-{% for article in blogs['news'].articles limit: 1 %}
-  {% include 'featured-post' %}
-{% endfor %}
+{% section 'featured-post' %}
 
 {% include 'posts-list' %}

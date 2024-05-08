@@ -1,0 +1,72 @@
+{% comment %}
+  Renders the featured post section.
+
+  Accepts:
+  - section: {Object} section object.
+
+  Usage:
+  {% render 'featured-post', section: section %}
+{% endcomment %}
+
+{% liquid
+  assign specific_blog_post = section.settings.blog_post
+  assign blog = section.settings.blog
+
+  assign content_type = section.settings.content_type
+  if content_type == 'blog_post'
+    assign blog_post = specific_blog_post
+  else
+    assign blog_post = blog.articles[0] | default: blogs.news.articles[0]
+  endif
+
+  assign background_color = section.settings.background_color
+  assign adjust_bottom_spacing_mobile = section.settings.adjust_bottom_spacing_mobile
+  assign adjust_bottom_spacing = section.settings.adjust_bottom_spacing
+%}
+
+{% if blog_post %}
+  <section class="featured-post-container">
+    <div class="featured-post f fdc aic rel">
+      <div class="featured-post_img">
+        {% # This will automatically create a srcet and render an <img> tag %}
+        {{ blog_post.image | image_url: width: 768 | image_tag: loading: 'lazy ' }}
+      </div>
+
+      <div class="featured-post_info bg-white pv2 ph1">
+        <div class="featured-post_info--content f fdc aic jcc align-c">
+          {% render 'post-icon', article: blog_post %}
+          <span class="date bold">{{ blog_post.created_at | date: '%B %d' | upcase }}</span>
+
+          <h3 class="main-heading bold">{{ blog_post.title }}</h3>
+
+          <p class="container--xxs">
+            {{ blog_post.content | strip_html | truncate: 172 }}
+          </p>
+
+          {% render 'read-more', article: blog_post %}
+        </div>
+      </div>
+    </div>
+  </section>
+{% else %}
+  {% # This will only show to the merchant when setting up the app, not in the storefront %}
+  {% if request.design_mode %}
+    <p>Select a blog post or a blog</p>
+  {% endif %}
+{% endif %}
+
+<style data-shopify>
+  .featured-post-container {
+    margin-bottom: {{ adjust_bottom_spacing_mobile }}px;
+  }
+
+  .featured-post-container::after {
+    background-color: {{ background_color }};
+  }
+
+  @media only screen and (min-width: 960px) {
+    .featured-post-container {
+      margin-bottom: {{ adjust_bottom_spacing }}px;
+    }
+  }
+</style>
