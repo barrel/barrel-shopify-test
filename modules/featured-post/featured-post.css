@@ -1,1 +1,140 @@
-.featured-post {}
+.featured-post {
+  margin-bottom: var(--h-padding-xs);
+  margin-top: calc(var(--h-padding-xl) * -1);
+  position: relative;
+  width: 100%;
+  z-index: 2;
+}
+
+.featured-post::after {
+  background-color: var(--mongoose);
+  content: '';
+  height: calc(100% - var(--h-padding-xl));
+  left: 0;
+  padding-bottom: var(--h-padding-xs);
+  position: absolute;
+  top: var(--h-padding-xl);
+  width: 100%;
+  z-index: -1;
+}
+
+.featured-post__inner {
+  margin: 0 auto;
+  padding: 0 var(--h-padding-xs);
+  width: 100%;
+}
+
+.featured-post__grid {
+  align-items: center;
+  background-color: var(--white);
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  justify-content: center;
+}
+
+.featured-post__grid-item {
+  width: 100%;
+}
+
+.featured-post__grid-item--media {
+  height: 321px;
+  position: relative;
+}
+
+.featured-post__image {
+  object-fit: cover;
+}
+
+.featured-post__grid-item--details {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  padding: var(--h-padding-s) 5%;
+  text-align: center;
+}
+
+
+.featured-post__icon {
+  margin: 0 0 var(--paddingXS) 0;
+}
+
+.featured-post__date {
+  margin: 0 0 var(--paddingXS) 0;
+  text-transform: uppercase;
+  font-size: 12px;
+  font-weight: var(--f-weight-bold);
+}
+
+.featured-post__title {
+  line-height: 1.5;
+  font-size: 19px;
+}
+
+
+@media (--xs) {
+  .featured-post {
+    height: calc(100% - var(--paddingXL));
+    margin-bottom: var(--h-padding-s);
+    margin-top: calc(var(--paddingXL) * -1);
+  }
+
+  .featured-post::after {
+    padding-bottom: 0;
+    top: var(--paddingXL);
+  }
+
+  .featured-post__inner {
+    padding: 0 var(--h-padding-s);
+  }
+}
+
+@media (--ml) {
+  .featured-post {
+    margin-bottom: var(--paddingL);
+    margin-top: calc(calc(588px / 2) * -1);
+  }
+
+  .featured-post::after {
+    height: 50%;
+    padding-bottom: var(--paddingL);
+    top: 50%;
+  }
+
+  .featured-post__inner {
+    max-width: 1274px;
+    padding: 0 var(--h-padding-s);
+  }
+
+  .featured-post__grid {
+    flex-direction: row;
+  }
+
+  .featured-post__grid-item {
+    width: 50%;
+  }
+
+  .featured-post__grid-item--media {
+    height: 588px;
+  }
+
+  .featured-post__grid-item--details {
+    padding: 0 5%;
+  }
+
+  .featured-post__date {
+    font-size: 16px;
+  }
+}
+
+@media (--xl) {
+  .featured-post__inner {
+    padding: 0;
+  }
+
+  .featured-post__title {
+    font-size: 35px;
+    margin-bottom: 16px;
+    line-height: 1.4;
+  }
+}

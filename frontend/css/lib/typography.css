@@ -5,7 +5,7 @@
  *
  * i.e h1, h2, h3, p, li, a, etc
  */
-body {
+ body {
 	color: var(--black);
   font-family: 'Open Sans', sans-serif;
 	font-size: 14px;
@@ -36,7 +36,9 @@ p {
   margin-bottom: 15px;
 }
 .h1 {
+  font-size: 35px;
 }
+
 .h2 {
 }
 .h3 {
@@ -128,4 +130,16 @@ i, em {
 
 b, strong {
   @extend .bold;
+}
+
+@media (--s) {
+  .h1 {
+    font-size: 60px;
+  }
+}
+
+@media (--l) {
+  .h1 {
+    font-size: 70px;
+  }
 }
