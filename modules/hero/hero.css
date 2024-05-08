@@ -1,1 +1,65 @@
-.hero {}
+.banner {
+    flex-direction: column;
+    background-image: url('/assets/hero-image.jpg');
+    background-size: cover;
+}
+
+.tagline-container {
+    justify-content: center;
+}
+
+.slogan {
+    justify-content: center;
+    text-align: center;
+    padding: 10px;
+    width: var(--xxs);
+}
+.slogan_container {
+    flex-direction: column;
+}
+.title {
+    font-size: 3.2em;
+}
+
+.product-image {
+    width: 50%;
+    max-width: 350px;
+}
+
+@media (--ml) {
+    .product-image-container {
+        width: 50%;
+    }
+    .product-image {
+        max-width: 350px;
+    }
+    .slogan {
+        padding-left: 0;
+        padding: 0;
+        margin-top: -100px;
+        text-align: left !important;
+    }
+    .tagline-container {
+        justify-content: end;
+        width: 50%;
+    }
+    .banner {
+        flex-direction: row;
+    }
+    .slogan_container {
+        width: 90%;
+        flex-direction: row;
+    }
+}
+
+@media (--l) {
+    .title {
+        font-size: 3.7em;
+    }
+
+    .slogan {
+        width: auto;
+        margin-top: -150px;
+        padding-left: 27%;
+    }
+}
