@@ -8,9 +8,10 @@
   "scripts": {
     "start": "concurrently --prefix none npm:dev npm:serve",
     "dev": "vite dev",
-    "serve": "shopify theme dev --store=barrel-base",
+    "serve": "shopify theme dev --store=barrel-test-miske",
     "build": "vite build",
-    "deploy": "npm run build && shopify theme push --store=barrel-base --nodelete --ignore \"locales\\/[^\\/]*\\.json\" --ignore \"config/settings_data.json\" --ignore \"templates\\/[^\\/]*\\.json\""
+    "deploy": "npm run build && shopify theme push --store=barrel-test-miske --nodelete --ignore \"locales\\/[^\\/]*\\.json\" --ignore \"config/settings_data.json\" --ignore \"templates\\/[^\\/]*\\.json\"",
+    "sass": "gulp sass && gulp watch"
   },
   "repository": {
     "type": "git",
@@ -19,7 +20,7 @@
   "author": "Barrel, LLC",
   "license": "MIT",
   "bugs": {
-    "url": "https://gitlab.com/barrel/barrel-shopify-base/issues"
+    "url": "https://gitlab.com/Miske1996/barrel-shopify-base/issues"
   },
   "homepage": "https://gitlab.com/barrel/barrel-shopify-base#README",
   "devDependencies": {
@@ -54,10 +55,14 @@
     "dom-select": "^1.1.1",
     "feature.js": "^1.0.0",
     "flickity": "^2.0.10",
+    "gulp": "^5.0.0",
+    "gulp-rename": "^2.0.0",
+    "gulp-sass": "^5.1.0",
     "layzr.js": "^2.2.2",
     "lazysizes": "^4.1.2",
     "micro-jsonp": "^1.0.1",
     "nanoajax": "^0.4.3",
+    "node-sass": "^9.0.0",
     "preact": "^8.2.6",
     "preact-compat": "^3.17.0",
     "preact-redux": "^2.0.3",
@@ -66,6 +71,7 @@
     "query-string": "^5.0.1",
     "redux": "^3.7.2",
     "redux-thunk": "^2.2.0",
+    "sass": "^1.76.0",
     "select-dom": "^4.1.1",
     "shopify-shipping-calculator": "^0.1.0",
     "svbstrate": "^2.0.2",
