@@ -16,7 +16,7 @@
 ####################################################################
 
 # Variables
-MODULE_PATH="./src/modules"
+MODULE_PATH="./modules"
 
 # Terminal colors
 DEFAULT=$(tput setaf 7)

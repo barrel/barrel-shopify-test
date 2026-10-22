@@ -1,0 +1,242 @@
+.hero {
+    width: 100vw;
+    height: 1025px;
+    display: flex;
+    position: relative;
+    overflow: hidden;
+  
+    .hero_bg_image {
+      width: 100%;
+      height: 901px;
+      display: flex;
+      position: absolute;
+      top: -56px;
+      overflow: hidden;
+  
+      img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
+    }
+  
+    .gradient_layer {
+      width: 100%;
+      height: 901px;
+      top: -56px;
+      background: linear-gradient(to right, rgba(0, 0, 0, 0.3) 0%, rgba(0, 0, 0, 0) 100%);
+      position: absolute;
+    }
+  
+    .main_hero_content_container {
+      height: 510px;
+      display: flex;
+      gap: 138px;
+      margin-top: 56px;
+      margin-left: 189px;
+  
+      .hero_text_content {
+        display: flex;
+        flex-direction: column;
+        width: 514px;
+        gap: 15px;
+        margin-top: 66px;
+  
+        .title_hero {
+          color: white;
+          font-size: 70px;
+          font-weight: bold;
+        }
+  
+        .paragraph_hero {
+          color: white;
+          font-size: 16px;
+        }
+      }
+  
+      .hero_main_image {
+        width: 395px;
+        height: 510px;
+        position: relative;
+        overflow: hidden;
+  
+        img {
+          position: absolute;
+          top: 42.87px;
+          left: 36px;
+          height: 710.91px;
+        }
+      }
+    }
+  
+    @media (max-width: 1000px) {
+      width: 100vw;
+      height: 707px;
+  
+      .hero_bg_image {
+        width: 1493px;
+        height: 979px;
+        left: -194px;
+        top: 0;
+  
+        img {
+          width: 1131px;
+          height: 707px;
+          margin-left: 194px;
+        }
+      }
+  
+      .gradient_layer {
+        width: 100%;
+        height: 707px;
+        top: 0;
+      }
+  
+      .main_hero_content_container {
+        height: 510px;
+        gap: 74px;
+        margin-top: 56px;
+        margin-left: 60px;
+  
+        .hero_text_content {
+          width: 463px;
+          gap: 12px; 
+          margin-top: 102px;
+        }
+  
+        .hero_main_image {
+          width: 395px;
+          height: 471px;
+  
+          img {
+            top: 50px;
+            left: -22px;
+            height: 571px;
+          }
+        }
+      }
+    }
+  
+    @media (max-width: 600px) {
+      width: 100vw;
+      height: 684px;
+  
+      .hero_bg_image {
+        width: 100%;
+        height: 100%;
+        left: 0;
+        top: 0;
+  
+        img {
+          width: 1090px;
+          height: 100%;
+          margin-left: auto;
+          margin-right: auto;
+        }
+      }
+  
+      .gradient_layer {
+        width: 100%;
+        height: 100%;
+        top: 0;
+      }
+  
+      .main_hero_content_container {
+        height: fit-content;
+        gap: 0;
+        margin-top: 53px;
+        margin-left: auto;
+        margin-right: auto;
+        flex-direction: column;
+  
+        .hero_text_content {
+          width: 444px;
+          gap: 15px;
+          margin-top: 0;
+        }
+  
+        .hero_main_image {
+          width: 413px;
+          height: 321px;
+  
+          img {
+            top: 33px;
+            left: 76px;
+            height: 473px;
+          }
+        }
+      }
+    }
+  
+    @media (max-width: 320px) {
+      width: 100vw;
+      height: 689px;
+  
+      .hero_bg_image {
+        width: 1493px;
+        height: 857px;
+        left: 50%;
+        transform: translateX(-50%);
+        top: -86px;
+  
+        img {
+          width: 1102px;
+          height: 689px;
+          margin-left: 161px;
+          margin-top: 86px;
+        }
+      }
+  
+      .gradient_layer {
+        width: 100%;
+        height: 100%;
+        top: 0;
+      }
+  
+      .main_hero_content_container {
+        height: fit-content;
+        gap: 0;
+        margin-top: 38px;
+        margin-left: auto;
+        margin-right: auto;
+        flex-direction: column;
+  
+        .hero_text_content {
+          width: 285px;
+          gap: 4px;
+          margin-top: 0;
+          margin-left: auto;
+          margin-right: auto;
+          align-items: center;
+  
+          .title_hero {
+            font-size: 35px;
+            line-height: 40px;
+            text-align: center;
+            width: 270px;
+          }
+  
+          .paragraph_hero {
+            font-size: 14px;
+            line-height: 24px;
+            text-align: center;
+            width: 100%;
+          }
+        }
+  
+        .hero_main_image { 
+          width: 323px;
+          height: 367px;
+          margin-left: 33px;
+          margin-top: -60px;
+  
+          img {
+            top: 70px;
+            left: 22px;
+            height: 408px;
+          }
+        }
+      }
+    }
+  }
+  
