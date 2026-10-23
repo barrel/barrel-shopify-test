@@ -10,7 +10,7 @@
     <!-- 1. Wysiwyg -->
     <p class="h1">Wysiwyg</p>
     <hr/>
-    {% include 'wysiwyg' with content: page.content %}
+    {% include 'wysiwyg' with content, content: page.content %}
 
     <!-- 2. Forms -->
     <p class="h1 mt2">Forms</p>
@@ -79,3 +79,13 @@
 
   </div>
 </div>
+{% comment %}
+
+This file has been rewritten to preserve the original behavior.
+
+---
+Changes:
+- from: "{% include 'wysiwyg' with content: page.content %}"
+  to: "{% include 'wysiwyg' with content, content: page.content %}"
+  position: 256..315
+{% endcomment %}

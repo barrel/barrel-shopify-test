@@ -1,3 +1,13 @@
 {% assign account_page_title = 'Order ' | append: order.name %}
 {% include 'account-nav' %}
-{% include 'account-order-details' with order: order %}
+{% include 'account-order-details' with order, order: order %}
+{% comment %}
+
+This file has been rewritten to preserve the original behavior.
+
+---
+Changes:
+- from: "{% include 'account-order-details' with order: order %}"
+  to: "{% include 'account-order-details' with order, order: order %}"
+  position: 92..154
+{% endcomment %}
